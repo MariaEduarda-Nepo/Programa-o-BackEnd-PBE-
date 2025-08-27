@@ -13,8 +13,12 @@ class Produtos{
     }
 
     public function produto_vendido(){
-        $thi
-        
+        // Implement the method logic here, for example:
+        if ($this->qtde_estoque > 0) {
+            $this->qtde_estoque--;
+            return true;
+        }
+        return false;
     }
 
 
