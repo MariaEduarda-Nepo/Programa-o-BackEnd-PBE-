@@ -41,5 +41,32 @@ class apartamento extends imovel {
     }
 }
 
+//crie uma subclasse chamada escola com o atributo $seguimento.
+class escola extends imovel {
 
+    private $seguimento; //atributo string
+
+    public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $seguimento) {
+        parent::__construct($categoria, $n_comodos, $valor, $estado_conservacao);
+
+        $this->seguimento = $seguimento;
+    }
+}
+
+//crie uma classe filha chamada comercio com o atributo $tamanho.
+class comercio extends imovel {
+
+    private $tamanho; //atributo float
+
+    public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $tamanho) {
+        parent::__construct($categoria, $n_comodos, $valor, $estado_conservacao);
+
+        $this->tamanho = $tamanho;
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 ?>
+
+ 
+
+
+
