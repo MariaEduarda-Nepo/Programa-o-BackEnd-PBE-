@@ -96,4 +96,22 @@ class Pentagono implements Forma {
 $p = new Pentagono(4, 3);
 echo "Área do pentágono: " . $p->calcularArea() . "\n";
 
+
+class hexagono implements Forma {
+    private $lado;
+    private $apotema;
+
+    public function __construct($lado, $apotema) {
+        $this->lado = $lado;
+        $this->apotema = $apotema;
+    }
+
+    public function calcularArea() {
+        return (6 * $this->lado * $this->apotema) / 2;
+    }
+}
+
+echo number_format(3.14159265,2);
+
+
 ?>
