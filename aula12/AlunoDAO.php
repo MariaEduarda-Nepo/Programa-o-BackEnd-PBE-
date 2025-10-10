@@ -3,14 +3,14 @@
 class AlunoDAO {
     private $alunos = [];
 
-    public function criarAluno()
+    public function criarAluno(Aluno $aluno)
     {
-
+        $this->alunos[$aluno->getId()] = $aluno;
     }
 
     public function lerAluno()
     {
-
+        return $this->alunos;
     }
 
     public function atualizarAluno()
@@ -19,7 +19,7 @@ class AlunoDAO {
     }
     public function excluirAluno()
     {
-
+        unset($this->alunos[$id]);
     }
 
 }
