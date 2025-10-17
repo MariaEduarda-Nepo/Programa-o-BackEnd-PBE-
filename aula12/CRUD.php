@@ -1,6 +1,6 @@
 <?php
 
-
+//CRUD significa Create, Read, Update, Delete (Criar, Ler, Atualizar, Deletar)
 class Aluno {
     private $id;
     private $nome;
