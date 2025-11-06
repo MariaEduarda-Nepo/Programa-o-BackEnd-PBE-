@@ -1,0 +1,16 @@
+{
+    "H2O": {
+        "nome": "H2O",
+        "categoria": "Refrigerante",
+        "volume": "222",
+        "valor": "2.50",
+        "qtde": "213"
+    },
+    "Coca": {
+        "nome": "Coca",
+        "categoria": "Refrigerante",
+        "volume": "500",
+        "valor": "4.50",
+        "qtde": "8793"
+    }
+}
