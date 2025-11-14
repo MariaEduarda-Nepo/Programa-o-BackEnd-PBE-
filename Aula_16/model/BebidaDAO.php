@@ -1,10 +1,12 @@
+<?php
 
- <?php
+namespace Aula_16;
 
-use Aula_15\Bebida;
+require_once __DIR__ . '/Bebida.php';
+require_once __DIR__ . '/Connection.php';
 
-require_once 'Bebida.php';
-require_once 'Connection.php';
+use Aula_16\Connection;
+use PDO;
 
 class BebidaDAO {
     private $conn;
@@ -24,7 +26,6 @@ class BebidaDAO {
             )
         ");
     }
-    
 
     // CREATE
     public function criarBebida(Bebida $bebida) {

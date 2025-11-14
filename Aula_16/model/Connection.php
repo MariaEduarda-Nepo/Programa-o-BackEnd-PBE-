@@ -1,4 +1,8 @@
 <?php 
+namespace Aula_16;
+
+use PDO;
+use PDOException;
 
 class Connection {
   private static $instance = null;
