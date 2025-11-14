@@ -1,6 +1,6 @@
 <?php
 
-namespace Aula_15;
+namespace Aula_16;
 
 require_once __DIR__. '\\..\\Controller\\BebidaController.php';
 $controller = new BebidaController();

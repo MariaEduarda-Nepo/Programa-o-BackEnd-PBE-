@@ -1,6 +1,11 @@
 <?php
 
-namespace Aula_15;
+namespace Aula_16;
+
+use Aula_16\Bebida\Bebida;
+use BebidaDAO;
+
+
 
 require_once __DIR__. "\\..\\Model\\BebidaDAO.php";
 require_once __DIR__. "\\..\\Model\\Bebida.php";
@@ -22,18 +27,18 @@ class BebidaController {
     }
 
     //cadastra nova bebida
-
     public function criar($nome,$categoria,$volume,$valor,$qtde) {
         $id = time();
-        $bebida = new Bebida( $nome, $categoria, $volume, $valor, $qtde);
-        $this->dao->criarBebidas($bebida);
+        $bebida = new \Aula_16\Bebida( $nome, $categoria, $volume, $valor, $qtde);
+        $this->dao->criarBebida($bebida);
 
     }
+    
 
     // atualiza bebida existente
 
-    public function atualizar($nome, $valor, $qtde) {
-        $this->dao->atualizarBebidas($nome, $valor, $qtde);
+    public function atualizar($id, $nome, $categoria, $volume, $valor, $qtde) {
+        $this->dao->atualizarBebida($id, $nome, $categoria, $volume, $valor, $qtde);
     }
 
         // exclui bebida

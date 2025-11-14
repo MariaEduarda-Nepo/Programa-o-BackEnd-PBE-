@@ -1,5 +1,5 @@
 <?php
-namespace Aula_15;
+namespace Aula_16;
 
 class Bebida {
     private $nome;
