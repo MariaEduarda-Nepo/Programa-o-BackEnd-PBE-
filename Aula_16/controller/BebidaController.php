@@ -2,50 +2,37 @@
 
 namespace Aula_16;
 
-use Aula_16\Bebida\Bebida;
-use BebidaDAO;
-
-
-
-require_once __DIR__. "\\..\\Model\\BebidaDAO.php";
-require_once __DIR__. "\\..\\Model\\Bebida.php";
+require_once __DIR__ . "/../Model/BebidaDAO.php";
+require_once __DIR__ . "/../Model/Bebida.php";
 
 class BebidaController {
     private $dao;
 
-    //contrutor: cria o objeto DAO (responsavel por salvar/carregar)
-
+    // Construtor: cria o objeto DAO (responsável por salvar/carregar)
     public function __construct() {
         $this->dao = new BebidaDAO();
     }
 
-    //lista todas as bebidas 
-
+    // Lista todas as bebidas 
     public function ler() {
         return $this->dao->lerBebidas();
-
     }
 
-    //cadastra nova bebida
-    public function criar($nome,$categoria,$volume,$valor,$qtde) {
-        $id = time();
-        $bebida = new \Aula_16\Bebida( $nome, $categoria, $volume, $valor, $qtde);
+    // Cadastra nova bebida
+    public function criar($nome, $categoria, $volume, $valor, $qtde) {
+        $bebida = new Bebida($nome, $categoria, $volume, $valor, $qtde);
         $this->dao->criarBebida($bebida);
-
-    }
-    
-
-    // atualiza bebida existente
-
-    public function atualizar($id, $nome, $categoria, $volume, $valor, $qtde) {
-        $this->dao->atualizarBebida($id, $nome, $categoria, $volume, $valor, $qtde);
     }
 
-        // exclui bebida
+    // Atualiza bebida existente
+    public function atualizar($nomeOriginal, $novoNome, $categoria, $volume, $valor, $qtde) {
+        $this->dao->atualizarBebida($nomeOriginal, $novoNome, $categoria, $volume, $valor, $qtde);
+    }
+
+    // Exclui bebida
     public function deletar($nome) {
-            $this->dao->excluirBebida($nome);
-        
-        }
+        $this->dao->excluirBebida($nome);
     }
+}
 
 ?>
